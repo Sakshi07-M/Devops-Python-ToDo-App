@@ -41,7 +41,7 @@ Once the server is hosted, head over to http://127.0.0.1:8000/todos for the App.
 ### **Phase 1: Initial Setup and Deployment**
 
 **Step 1: Launch EC2 (Ubuntu 22.04):**
-NOTE: Can use local ubuntu machine created using virtualbox.
+NOTE: You can use local ubuntu machine created using virtualbox.
 
 - Provision an EC2 instance on AWS with Ubuntu 22.04.
 - Connect to the instance using SSH.
@@ -146,15 +146,9 @@ Goto Manage Jenkins →Plugins → Available Plugins →
 
 Install below plugins
 
-1 Eclipse Temurin Installer (Install without restart)
+1 SonarQube Scanner (Install without restart)
 
-2 SonarQube Scanner (Install without restart)
-
-3 NodeJs Plugin (Install Without restart)
-
-4 Email Extension Plugin
-
-5 TBD
+2 Pipeline: Stage View Plugin
 
 ### **Configure Java and Nodejs in Global Tool Configuration**
 
@@ -165,7 +159,7 @@ Goto Manage Jenkins → Tools → Install JDK(17) Click on Apply and Save
 
 Create the token
 
-Goto Jenkins Dashboard → Manage Jenkins → Credentials → Add Secret Text. It should look like this
+Goto Jenkins Dashboard → Manage Jenkins → Credentials → Add Secret Text. 
 
 After adding sonar token
 
@@ -181,6 +175,33 @@ Create a Jenkins webhook
 
 1. **Configure CI/CD Pipeline in Jenkins:**
 - Create a CI/CD pipeline in Jenkins to automate your application deployment.
+- Select "Pipeline Script from SCM" and add your github repository details
+- Click on Apply and Save
+
+**Install Docker Tools and Docker Plugins:**
+
+- Go to "Dashboard" in your Jenkins web interface.
+- Navigate to "Manage Jenkins" → "Manage Plugins."
+- Click on the "Available" tab and search for "Docker."
+- Check the following Docker-related plugins:
+  - Docker
+  - Docker Commons
+  - Docker Pipeline
+  - Docker API
+  - docker-build-step
+- Click on the "Install without restart" button to install these plugins.
+
+**Add DockerHub Credentials:**
+
+- To securely handle DockerHub credentials in your Jenkins pipeline, follow these steps:
+  - Go to "Dashboard" → "Manage Jenkins" → "Manage Credentials."
+  - Click on "System" and then "Global credentials (unrestricted)."
+  - Click on "Add Credentials" on the left side.
+  - Choose "Secret text" as the kind of credentials.
+  - Enter your DockerHub credentials (Username and Password) and give the credentials an ID (e.g., "docker").
+  - Click "OK" to save your DockerHub credentials.
+
+
 
 
   
