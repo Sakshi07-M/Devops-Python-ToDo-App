@@ -195,7 +195,7 @@ We will install a sonar scanner in the tools.
   - Enter your DockerHub credentials (Username and Password) and give the credentials an ID (e.g., "docker").
   - Click "OK" to save your DockerHub credentials.
  
-### **Phase 4: Kubernetes Setup**
+### **Phase 3: Kubernetes Setup**
 
 1. **Create a minikube cluster:**
 - Create a minikube cluster on local setup/AWS EC2 Instance:
@@ -253,19 +253,21 @@ Edit minikube svc to access it on browser
 Use URL generated from last command's output to access ArgoCD
 e.g. http://192.168.59.102:31000/
 
+3. **Create application on ArgoCD:**
+
+- Click on application and create application
+- Add all the required details and save the application
+- Once saved, you will be able to see the deployment and services on argoCD UI, once CI/CD pipeline is triggered
+
 ### **Phase 4: Run CI/CD pipeline**
 
 1. **Configure CI/CD Pipeline in Jenkins:**
 - Create a CI/CD pipeline in Jenkins to automate your application deployment.
 - Select "Pipeline Script from SCM" and add your github repository details
 - Click on Apply and Save
+- Click on "Build Now" to trigger the pipeline
 
-
-
-
-  
-
-    
-
-
-
+### **Phase 5: Deployment Verification**
+- Check if manifest repo is updated with latest image tag in deployment.yaml file
+- Open ArgoCD UI and verify if able to see deployment.
+- Access UI and check if application is running.
