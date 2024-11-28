@@ -80,7 +80,7 @@ NOTE: You can use local ubuntu machine created using virtualbox.
     ```
 
 
-**Phase 2: Security**
+### **Phase 2: Security**
 
 1. **Install SonarQube and Trivy:**
     - Install SonarQube and Trivy on the EC2 instance to scan for vulnerabilities.
@@ -109,7 +109,7 @@ NOTE: You can use local ubuntu machine created using virtualbox.
         trivy image <imageid>
         ```
         
-**Phase 3: CI/CD Setup**
+### **Phase 3: CI/CD Setup**
 
 1. **Install Jenkins for Automation:**
     - Install Jenkins on the EC2 instance to automate deployment:
@@ -195,7 +195,7 @@ We will install a sonar scanner in the tools.
   - Enter your DockerHub credentials (Username and Password) and give the credentials an ID (e.g., "docker").
   - Click "OK" to save your DockerHub credentials.
  
-### **Phase 3: Kubernetes Setup**
+### **Phase 4: Kubernetes Setup**
 
 1. **Create a minikube cluster:**
 - Create a minikube cluster on local setup/AWS EC2 Instance:
