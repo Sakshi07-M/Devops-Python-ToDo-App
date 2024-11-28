@@ -171,12 +171,6 @@ Click on Apply and Save
 
 We will install a sonar scanner in the tools.
 
-Create a Jenkins webhook
-
-1. **Configure CI/CD Pipeline in Jenkins:**
-- Create a CI/CD pipeline in Jenkins to automate your application deployment.
-- Select "Pipeline Script from SCM" and add your github repository details
-- Click on Apply and Save
 
 **Install Docker Tools and Docker Plugins:**
 
@@ -200,6 +194,71 @@ Create a Jenkins webhook
   - Choose "Secret text" as the kind of credentials.
   - Enter your DockerHub credentials (Username and Password) and give the credentials an ID (e.g., "docker").
   - Click "OK" to save your DockerHub credentials.
+ 
+### **Phase 4: Kubernetes Setup**
+
+1. **Create a minikube cluster:**
+- Create a minikube cluster on local setup/AWS EC2 Instance:
+- Install kubernetes-cli
+  - After installation of minikube (For windows machine), open powershell and run command:
+    ```bash
+    minikube start
+    ```
+  - Run below command to check if kubectl is up
+    ```bash
+    kubectl get nodes
+    ```
+
+3. **Install ArgoCD on minikube:**
+
+Installation using kubernetes operators (Refer: )
+
+- Install Operator Lifecycle Manager (OLM), a tool to help manage the Operators running on your cluster.
+```bash
+$ curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.30.0/install.sh | bash -s v0.30.0
+```
+Install the operator by running the following command
+```bash
+$ kubectl create -f https://operatorhub.io/install/argocd-operator.yaml
+```
+
+After install, watch your operator come up using next command.
+```bash
+$ kubectl get pods -n operators
+```
+
+Refer: https://argocd-operator.readthedocs.io/en/latest/usage/basics/
+- Create argocd-basic.yaml file and add below content
+```bash
+apiVersion: argoproj.io/v1alpha1
+kind: ArgoCD
+metadata:
+  name: example-argocd
+  labels:
+    example: basic
+spec: {}
+```
+Check if argocd pods and service is up
+```bash
+  kubectl apply -f argocd-basic.yaml
+  kubectl get pods
+  kubectl get svc
+```
+Edit minikube svc to access it on browser
+```bash
+   kubectl edit svc example-argocd-server #Change ClusterIP to NodePort
+   minikube service argocd-server
+   minikube service list
+```
+Use URL generated from last command's output to access ArgoCD
+e.g. http://192.168.59.102:31000/
+
+### **Phase 4: Run CI/CD pipeline**
+
+1. **Configure CI/CD Pipeline in Jenkins:**
+- Create a CI/CD pipeline in Jenkins to automate your application deployment.
+- Select "Pipeline Script from SCM" and add your github repository details
+- Click on Apply and Save
 
 
 
