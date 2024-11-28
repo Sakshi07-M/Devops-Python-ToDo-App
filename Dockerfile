@@ -1,7 +1,7 @@
 FROM python:3
 RUN pip3 install django
 
-COPY ./manage.py .
+COPY . .
 RUN python3 manage.py makemigrations
 RUN python3 manage.py migrate
 
