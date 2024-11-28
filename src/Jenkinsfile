@@ -18,7 +18,7 @@ pipeline{
 
         stage('Checkout From Git'){
             steps{
-                git branch: 'test', url: 'https://github.com/Sakshi07-M/Devops-Python-ToDo-App.git'
+                git branch: 'main', url: 'https://github.com/Sakshi07-M/Devops-Python-Todo-App.git'
             }
         }
 
@@ -43,13 +43,13 @@ pipeline{
         }
         stage("TRIVY Image Scan"){
             steps{
-                sh "trivy image sakshi0721/todo-app:${BUILD_NUMBER} > trivyimage.txt" 
+                sh "trivy image sakshi0721/todo-app:${BUILD_NUMBER} > trivy/trivyimage.txt" 
             }
         }
 
         stage('Update Deployment File') {
             environment {
-                GIT_REPO_NAME = "Devops-Python-ToDo-App"
+                GIT_REPO_NAME = "Devops-Python-Todo-App"
                 GIT_USER_NAME = "Sakshi07-M"
             }
             steps {
@@ -60,11 +60,14 @@ pipeline{
                         git config user.email "majalekars2107@gmail.com"
                         git config user.name "Sakshi07-M"
                         BUILD_NUMBER=${BUILD_NUMBER}
-                        sed -i "s/ReplaceTag/${BUILD_NUMBER}/g" kubernetes/deployment.yaml
+                        IMAGE_TAG=$(grep -oP '(?<=todo-app:)[^ ]+' kubernetes/deployment.yaml)  
+                        
+                        sed -i "s/todo-app:${IMAGE_TAG}/todo-app:${BUILD_NUMBER}/g" kubernetes/deployment.yaml                        
                         git add kubernetes/deployment.yaml
-                        git add trivyimage.txt
                         git commit -m "Update deployment image to version ${BUILD_NUMBER}"
-                        git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:test
+                        git add trivy/trivyimage.txt
+                        git commit -m "Updated trivyimage.txt file"                        
+                        git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
                     '''
                 }
             }
