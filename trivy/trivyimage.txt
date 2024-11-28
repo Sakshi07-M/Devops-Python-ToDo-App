@@ -1,0 +1,1 @@
+#Trivy image scan output
