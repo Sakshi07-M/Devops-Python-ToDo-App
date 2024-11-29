@@ -150,7 +150,7 @@ Install below plugins
 
 2 Pipeline: Stage View Plugin
 
-### **Configure Java and Nodejs in Global Tool Configuration**
+Configure Java in Global Tool Configuration
 
 Goto Manage Jenkins → Tools → Install JDK(17) Click on Apply and Save
 
@@ -204,9 +204,9 @@ We will install a sonar scanner in the tools.
     ```bash
     minikube start
     ```
-  - Run below command to check if kubectl is up
+  - Run below command to check if minikube is up
     ```bash
-    kubectl get nodes
+    minikube status
     ```
 
 3. **Install ArgoCD on minikube:**
@@ -261,7 +261,18 @@ e.g. http://192.168.59.102:31000/
 
 ### **Phase 4: Run CI/CD pipeline**
 
-1. **Configure CI/CD Pipeline in Jenkins:**
+1. **Add Github Credentials:**
+
+- To securely handle github credentials in your Jenkins pipeline, follow these steps:
+  - Go to "Dashboard" → "Manage Jenkins" → "Manage Credentials."
+  - Click on "System" and then "Global credentials (unrestricted)."
+  - Click on "Add Credentials" on the left side.
+  - Choose "Secret text" as the kind of credentials.
+  - Enter your Github credentials (Username and Password) and give the credentials an ID (e.g., "github").
+NOTE: Here passowrd will be token generated from github.
+  - Click "OK" to save your github credentials.
+    
+2. **Configure CI/CD Pipeline in Jenkins:**
 - Create a CI/CD pipeline in Jenkins to automate your application deployment.
 - Select "Pipeline Script from SCM" and add your github repository details
 - Click on Apply and Save
