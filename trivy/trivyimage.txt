@@ -8,9 +8,9 @@ Learn more and start using VEX: https://aquasecurity.github.io/trivy/v0.57/docs/
 To disable this notice, set the TRIVY_DISABLE_VEX_NOTICE environment variable.
 
 
-sakshi0721/todo-app:3 (debian 12.8)
+sakshi0721/todo-app:4 (debian 12.8)
 ===================================
-Total: 1194 (UNKNOWN: 11, LOW: 545, MEDIUM: 494, HIGH: 138, CRITICAL: 6)
+Total: 1202 (UNKNOWN: 4, LOW: 545, MEDIUM: 511, HIGH: 136, CRITICAL: 6)
 
 ┌──────────────────────────────┬─────────────────────┬──────────┬──────────────┬──────────────────────────────┬─────────────────┬──────────────────────────────────────────────────────────────┐
 │           Library            │    Vulnerability    │ Severity │    Status    │      Installed Version       │  Fixed Version  │                            Title                             │
@@ -2086,10 +2086,6 @@ Total: 1194 (UNKNOWN: 11, LOW: 545, MEDIUM: 494, HIGH: 138, CRITICAL: 6)
 │                              │                     │          │              │                              │                 │ smb2_query_info_compound()                                   │
 │                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2023-52751                   │
 │                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2023-52827      │          │              │                              │                 │ kernel: wifi: ath12k: fix possible out-of-bound read in      │
-│                              │                     │          │              │                              │                 │ ath12k_htt_pull_ppdu_stats()                                 │
-│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2023-52827                   │
-│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2024-21803      │          │              │                              │                 │ kernel: bluetooth: use-after-free vulnerability in           │
 │                              │                     │          │              │                              │                 │ af_bluetooth.c                                               │
 │                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-21803                   │
@@ -2196,10 +2192,6 @@ Total: 1194 (UNKNOWN: 11, LOW: 545, MEDIUM: 494, HIGH: 138, CRITICAL: 6)
 │                              │ CVE-2024-49928      │          │              │                              │                 │ kernel: wifi: rtw89: avoid reading out of bounds when        │
 │                              │                     │          │              │                              │                 │ loading TX power...                                          │
 │                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-49928                   │
-│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2024-49931      │          │              │                              │                 │ kernel: wifi: ath12k: fix array out-of-bound access in SoC   │
-│                              │                     │          │              │                              │                 │ stats                                                        │
-│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-49931                   │
 │                              ├─────────────────────┤          ├──────────────┤                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2024-49950      │          │ fixed        │                              │ 6.1.119-1       │ kernel: Bluetooth: L2CAP: Fix uaf in l2cap_connect           │
 │                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-49950                   │
@@ -2278,10 +2270,7 @@ Total: 1194 (UNKNOWN: 11, LOW: 545, MEDIUM: 494, HIGH: 138, CRITICAL: 6)
 │                              │                     │          │              │                              │                 │ decoder shutdown                                             │
 │                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-50226                   │
 │                              ├─────────────────────┤          ├──────────────┤                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2024-50228      │          │ fixed        │                              │ 6.1.119-1       │ kernel: mm: shmem: fix data-race in shmem_getattr()          │
-│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-50228                   │
-│                              ├─────────────────────┤          │              │                              │                 ├──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2024-50230      │          │              │                              │                 │ kernel: nilfs2: fix kernel bug due to missing clearing of    │
+│                              │ CVE-2024-50230      │          │ fixed        │                              │ 6.1.119-1       │ kernel: nilfs2: fix kernel bug due to missing clearing of    │
 │                              │                     │          │              │                              │                 │ checked flag...                                              │
 │                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-50230                   │
 │                              ├─────────────────────┤          │              │                              │                 ├──────────────────────────────────────────────────────────────┤
@@ -2376,6 +2365,10 @@ Total: 1194 (UNKNOWN: 11, LOW: 545, MEDIUM: 494, HIGH: 138, CRITICAL: 6)
 │                              ├─────────────────────┤          ├──────────────┤                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2024-53082      │          │ fixed        │                              │ 6.1.119-1       │ kernel: virtio_net: Add hash_key_length check                │
 │                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53082                   │
+│                              ├─────────────────────┤          ├──────────────┤                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53103      │          │ affected     │                              │                 │ In the Linux kernel, the following vulnerability has been    │
+│                              │                     │          │              │                              │                 │ resolved: h...                                               │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53103                   │
 │                              ├─────────────────────┼──────────┼──────────────┤                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2019-15213      │ MEDIUM   │ fix_deferred │                              │                 │ kernel: use-after-free caused by malicious USB device in     │
 │                              │                     │          │              │                              │                 │ drivers/media/usb/dvb-usb/dvb-usb-init.c                     │
@@ -2506,11 +2499,7 @@ Total: 1194 (UNKNOWN: 11, LOW: 545, MEDIUM: 494, HIGH: 138, CRITICAL: 6)
 │                              │                     │          │              │                              │                 │ param                                                        │
 │                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2023-52812                   │
 │                              ├─────────────────────┤          ├──────────────┤                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2023-52829      │          │ affected     │                              │                 │ kernel: wifi: ath12k: fix possible out-of-bound write in     │
-│                              │                     │          │              │                              │                 │ ath12k_wmi_ext_hal_reg_caps()                                │
-│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2023-52829                   │
-│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2023-52857      │          │              │                              │                 │ kernel: drm/mediatek: Fix coverity issue with unintentional  │
+│                              │ CVE-2023-52857      │          │ affected     │                              │                 │ kernel: drm/mediatek: Fix coverity issue with unintentional  │
 │                              │                     │          │              │                              │                 │ integer overflow                                             │
 │                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2023-52857                   │
 │                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
@@ -3016,9 +3005,6 @@ Total: 1194 (UNKNOWN: 11, LOW: 545, MEDIUM: 494, HIGH: 138, CRITICAL: 6)
 │                              │                     │          │              │                              │                 │ devices in reverse order                                     │
 │                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-40975                   │
 │                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2024-40979      │          │              │                              │                 │ kernel: wifi: ath12k: fix kernel crash during resume         │
-│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-40979                   │
-│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2024-40982      │          │              │                              │                 │ kernel: ssb: Fix potential NULL pointer dereference in       │
 │                              │                     │          │              │                              │                 │ ssb_device_uevent()                                          │
 │                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-40982                   │
@@ -3353,10 +3339,6 @@ Total: 1194 (UNKNOWN: 11, LOW: 545, MEDIUM: 494, HIGH: 138, CRITICAL: 6)
 │                              │ CVE-2024-46825      │          │              │                              │                 │ kernel: wifi: iwlwifi: mvm: use IWL_FW_CHECK for link ID     │
 │                              │                     │          │              │                              │                 │ check                                                        │
 │                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-46825                   │
-│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2024-46827      │          │              │                              │                 │ kernel: wifi: ath12k: fix firmware crash due to invalid peer │
-│                              │                     │          │              │                              │                 │ nss                                                          │
-│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-46827                   │
 │                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2024-46834      │          │              │                              │                 │ kernel: ethtool: fail closed if we can&#39;t get max channel │
 │                              │                     │          │              │                              │                 │ used in...                                                   │
@@ -3788,10 +3770,6 @@ Total: 1194 (UNKNOWN: 11, LOW: 545, MEDIUM: 494, HIGH: 138, CRITICAL: 6)
 │                              │                     │          │              │                              │                 │ start write                                                  │
 │                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53052                   │
 │                              ├─────────────────────┤          │              │                              │                 ├──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2024-53054      │          │              │                              │                 │ kernel: cgroup/bpf: use a dedicated workqueue for cgroup bpf │
-│                              │                     │          │              │                              │                 │ destruction                                                  │
-│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53054                   │
-│                              ├─────────────────────┤          │              │                              │                 ├──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2024-53055      │          │              │                              │                 │ kernel: wifi: iwlwifi: mvm: fix 6 GHz scan construction      │
 │                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53055                   │
 │                              ├─────────────────────┤          ├──────────────┤                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
@@ -3865,6 +3843,86 @@ Total: 1194 (UNKNOWN: 11, LOW: 545, MEDIUM: 494, HIGH: 138, CRITICAL: 6)
 │                              │ CVE-2024-53095      │          │              │                              │                 │ kernel: smb: client: Fix use-after-free of network           │
 │                              │                     │          │              │                              │                 │ namespace.                                                   │
 │                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53095                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53096      │          │              │                              │                 │ In the Linux kernel, the following vulnerability has been    │
+│                              │                     │          │              │                              │                 │ resolved: m...                                               │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53096                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53097      │          │              │                              │                 │ In the Linux kernel, the following vulnerability has been    │
+│                              │                     │          │              │                              │                 │ resolved: m...                                               │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53097                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53098      │          │              │                              │                 │ In the Linux kernel, the following vulnerability has been    │
+│                              │                     │          │              │                              │                 │ resolved: d...                                               │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53098                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53099      │          │              │                              │                 │ In the Linux kernel, the following vulnerability has been    │
+│                              │                     │          │              │                              │                 │ resolved: b...                                               │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53099                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53100      │          │              │                              │                 │ In the Linux kernel, the following vulnerability has been    │
+│                              │                     │          │              │                              │                 │ resolved: n...                                               │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53100                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53101      │          │              │                              │                 │ In the Linux kernel, the following vulnerability has been    │
+│                              │                     │          │              │                              │                 │ resolved: f...                                               │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53101                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53102      │          │              │                              │                 │ In the Linux kernel, the following vulnerability has been    │
+│                              │                     │          │              │                              │                 │ resolved: n...                                               │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53102                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53104      │          │              │                              │                 │ In the Linux kernel, the following vulnerability has been    │
+│                              │                     │          │              │                              │                 │ resolved: m...                                               │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53104                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53105      │          │              │                              │                 │ kernel: mm: page_alloc: move mlocked flag clearance into     │
+│                              │                     │          │              │                              │                 │ free_pages_prepare()                                         │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53105                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53106      │          │              │                              │                 │ kernel: ima: fix buffer overrun in                           │
+│                              │                     │          │              │                              │                 │ ima_eventdigest_init_common                                  │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53106                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53108      │          │              │                              │                 │ kernel: drm/amd/display: Adjust VSDB parser for replay       │
+│                              │                     │          │              │                              │                 │ feature                                                      │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53108                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53110      │          │              │                              │                 │ kernel: vp_vdpa: fix id_table array not null terminated      │
+│                              │                     │          │              │                              │                 │ error                                                        │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53110                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53112      │          │              │                              │                 │ kernel: ocfs2: uncache inode which has failed entering the   │
+│                              │                     │          │              │                              │                 │ group                                                        │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53112                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53113      │          │              │                              │                 │ kernel: mm: fix NULL pointer dereference in                  │
+│                              │                     │          │              │                              │                 │ alloc_pages_bulk_noprof                                      │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53113                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53114      │          │              │                              │                 │ kernel: x86/CPU/AMD: Clear virtualized VMLOAD/VMSAVE on Zen4 │
+│                              │                     │          │              │                              │                 │ client                                                       │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53114                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53119      │          │              │                              │                 │ kernel: virtio/vsock: Fix accept_queue memory leak           │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53119                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53120      │          │              │                              │                 │ kernel: net/mlx5e: CT: Fix null-ptr-deref in add rule err    │
+│                              │                     │          │              │                              │                 │ flow                                                         │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53120                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53121      │          │              │                              │                 │ kernel: net/mlx5: fs, lock FTE when checking if active       │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53121                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53122      │          │              │                              │                 │ kernel: mptcp: cope racing subflow creation in               │
+│                              │                     │          │              │                              │                 │ mptcp_rcv_space_adjust                                       │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53122                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53123      │          │              │                              │                 │ kernel: mptcp: error out earlier on disconnect               │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53123                   │
+│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
+│                              │ CVE-2024-53124      │          │              │                              │                 │ kernel: net: fix data-races around sk->sk_forward_alloc      │
+│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53124                   │
 │                              ├─────────────────────┼──────────┤              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
 │                              │ CVE-2004-0230       │ LOW      │              │                              │                 │ TCP, when using a large Window Size, makes it easier for     │
 │                              │                     │          │              │                              │                 │ remote...                                                    │
@@ -4115,34 +4173,6 @@ Total: 1194 (UNKNOWN: 11, LOW: 545, MEDIUM: 494, HIGH: 138, CRITICAL: 6)
 │                              │ TEMP-0000000-F7A20F │          │ affected     │                              │                 │ [Kernel: Unprivileged user can freeze journald]              │
 │                              │                     │          │              │                              │                 │ https://security-tracker.debian.org/tracker/TEMP-0000000-F7- │
 │                              │                     │          │              │                              │                 │ A20F                                                         │
-│                              ├─────────────────────┼──────────┤              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2024-53096      │ UNKNOWN  │              │                              │                 │ In the Linux kernel, the following vulnerability has been    │
-│                              │                     │          │              │                              │                 │ resolved: m...                                               │
-│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53096                   │
-│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2024-53097      │          │              │                              │                 │ In the Linux kernel, the following vulnerability has been    │
-│                              │                     │          │              │                              │                 │ resolved: m...                                               │
-│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53097                   │
-│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2024-53098      │          │              │                              │                 │ In the Linux kernel, the following vulnerability has been    │
-│                              │                     │          │              │                              │                 │ resolved: d...                                               │
-│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53098                   │
-│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2024-53099      │          │              │                              │                 │ In the Linux kernel, the following vulnerability has been    │
-│                              │                     │          │              │                              │                 │ resolved: b...                                               │
-│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53099                   │
-│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2024-53100      │          │              │                              │                 │ In the Linux kernel, the following vulnerability has been    │
-│                              │                     │          │              │                              │                 │ resolved: n...                                               │
-│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53100                   │
-│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2024-53101      │          │              │                              │                 │ In the Linux kernel, the following vulnerability has been    │
-│                              │                     │          │              │                              │                 │ resolved: f...                                               │
-│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53101                   │
-│                              ├─────────────────────┤          │              │                              ├─────────────────┼──────────────────────────────────────────────────────────────┤
-│                              │ CVE-2024-53102      │          │              │                              │                 │ In the Linux kernel, the following vulnerability has been    │
-│                              │                     │          │              │                              │                 │ resolved: n...                                               │
-│                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2024-53102                   │
 ├──────────────────────────────┼─────────────────────┼──────────┤              ├──────────────────────────────┼─────────────────┼──────────────────────────────────────────────────────────────┤
 │ login                        │ CVE-2023-4641       │ MEDIUM   │              │ 1:4.13+dfsg1-1+b1            │                 │ shadow-utils: possible password leak during passwd(1) change │
 │                              │                     │          │              │                              │                 │ https://avd.aquasec.com/nvd/cve-2023-4641                    │
