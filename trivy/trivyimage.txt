@@ -8,7 +8,7 @@ Learn more and start using VEX: https://aquasecurity.github.io/trivy/v0.57/docs/
 To disable this notice, set the TRIVY_DISABLE_VEX_NOTICE environment variable.
 
 
-sakshi0721/todo-app:4 (debian 12.8)
+sakshi0721/todo-app:5 (debian 12.8)
 ===================================
 Total: 1202 (UNKNOWN: 4, LOW: 545, MEDIUM: 511, HIGH: 136, CRITICAL: 6)
 
